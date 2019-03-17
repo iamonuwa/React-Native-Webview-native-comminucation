@@ -169,7 +169,7 @@ export default class BurnerWebView extends Component {
           scalesPageToFit={false}
           mixedContentMode={"always"}
           onMessage={event => {
-            alert(event.nativeEvent, event.nativeEvent.data);
+            console.warn("Message from website ", event.nativeEvent.data);
             if (event && event.nativeEvent && event.nativeEvent.data) {
               this.handleMessage(event.nativeEvent.data);
             }
