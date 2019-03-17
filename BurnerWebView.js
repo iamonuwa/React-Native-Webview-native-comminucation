@@ -61,6 +61,7 @@ export default class BurnerWebView extends Component {
 
   handleMessage = data => {
     let msgData;
+    msgData = JSON.parse(data);
     if (msgData.hasOwnProperty("prefix") && msgData.prefix === MESSAGE_PREFIX) {
       console.warn(`Webview: received message: `, msgData.payload);
       // this.onOpenScanner();
